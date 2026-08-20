@@ -1,0 +1,28 @@
+textarea {
+    resize: vertical;
+    border-radius: 5px;
+}
+label {
+    display: block;
+}
+form {
+    width: 300px;
+}
+body {
+    font-family: sans-serif;
+}
+.button {
+    cursor: pointer;
+}
+input {
+    border-radius: 5px;
+}
+fieldset {
+    border-radius: 7px;
+}
+.l1 {
+    padding-top: 7px;
+}
+.l2 {
+    padding-top: 2px;
+}
