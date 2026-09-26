@@ -1,0 +1,125 @@
+.new-arrivals {
+    margin-top: 76px;
+}
+
+.new__arrivals-item {
+    max-width: 296px;
+    max-height: 413px;
+}
+
+.title-arrivals__title-large {
+    margin-bottom: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--i);
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    color: #000;
+}
+
+.new-arrivals__container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.title-item {
+    font-family: var(--s);
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+}
+
+
+.fourH {
+    font-family: var(--s);
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+.fiveH {
+    font-family: var(--s);
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+.sixH {
+    margin-inline: 10px;
+    font-family: var(--s);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.eightH {
+    margin-inline: 10px;
+    font-family: var(--s);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.sixHbase {
+    font-family: var(--s);
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+.seveH {
+    font-family: var(--s);
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+.sale-procent {
+    font-family: var(--s);
+    font-weight: 500;
+    font-size: 12px;
+    color: #f33;
+    border-radius: 62px;
+    padding: 6px 14px;
+    width: 58px;
+    height: 28px;
+    background: rgba(255, 51, 51, 0.1);
+}
+
+.sale-procent-second {
+    font-family: var(--s);
+    font-weight: 500;
+    font-size: 12px;
+    color: #f33;
+    border-radius: 62px;
+    padding: 6px 14px;
+    width: 58px;
+    height: 28px;
+    background: rgba(255, 51, 51, 0.1);
+}
+
+.new-arrivals__button {
+    display: block;
+    margin: 36px auto 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 62px;
+    padding: 16px auto;
+    width: 218px;
+    height: 52px;
+    font-family: var(--s);
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+}
+
+.stick-2 {
+    margin: 64px auto 64px auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 1240px;
+    height: 0;
+}
