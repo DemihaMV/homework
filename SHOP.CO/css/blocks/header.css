@@ -1,0 +1,229 @@
+.hzz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    background-color: #000;
+}
+
+.container__hz {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.hz__p {
+    font-family: var(--s);
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hz__a {
+    font-family: var(--s);
+    color: #f0f0f0;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-color: white;
+}
+
+.hz__button {
+    position: absolute;
+    right: 0;
+    transform: translateX(-50%);
+}
+
+.header {
+    margin: 15px 100px;
+    display: flex;
+    justify-content: center;
+}
+.header__container {
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__h1 {
+    font-family: var(--i) ;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    margin-inline: 16px;
+}
+
+.nav a {
+    font-family: var(--s);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.nav a:hover { color: #4dd0e1; }
+
+.shop::after {
+    content: url(../../icons/store-arrow-down.svg);
+    width: 16px;
+    height: 16px;
+    margin: 3px 0 3px 4px;
+}
+
+.header__search {
+    font-family: var(--s);
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #f0f0f0 ;
+    box-shadow: none;
+    border-radius: 62px;
+    background-color: #f0f0f0 ;
+    padding: 12px 16px 12px 34px;
+    max-width: 462px;
+}
+
+.search__label {
+    position: relative;
+}
+
+.search__label::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.store-profil {
+    position: relative;
+    margin-left: 40px;
+}
+
+.header__button {
+    margin-right: 16px;
+}
+
+.burger {
+    position: absolute;
+    right: -40px;
+    bottom: -10px;
+    transform: translateX(-50%);
+    display: none;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001;
+}
+.burger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 3px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.burger div span:nth-child(1) { top: 0; }
+.burger div span:nth-child(2) { top: 9px; }
+.burger div span:nth-child(3) { top: 18px; }
+
+.burger.active span:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+@media (width <= 922px) {
+
+    .header {
+        margin: 15px 14px;
+    }
+
+    .header__h1 {
+        font-size: 26px;
+    }
+}
+
+@media (width <= 768px) {
+
+    .hz__p {
+        display: none;
+    }
+
+    .header__h1 {
+        margin-right: 150px;
+    }
+
+    .nav {
+    position: fixed;
+    margin-inline: 0;
+    top: 0;
+    right: -280px;
+    width: 260px;
+    height: 100%;
+    background: #222;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 20px 20px;
+    gap: 20px;
+    transition: right 0.35s ease;
+    z-index: 1000;
+  }
+  .nav.active {
+    right: 0;
+  }
+  .nav a {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media (width <= 576px) {
+    .header__h1 {
+        margin-right: 7px;
+    }
+
+    .store-profil {
+        margin-left: 18px;
+    }
+}
