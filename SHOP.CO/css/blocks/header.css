@@ -1,0 +1,558 @@
+.hzz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    background-color: #000;
+}
+
+.container__hz {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.hz__p {
+    font-family: var(--s);
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hz__a {
+    font-family: var(--s);
+    color: #f0f0f0;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-color: white;
+}
+
+.hz__button {
+    position: absolute;
+    right: 0;
+    transform: translateX(-50%);
+}
+
+.header {
+    margin: 15px 100px;
+    display: flex;
+    justify-content: center;
+}
+.header__container {
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__h1 {
+    font-family: var(--i) ;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    margin-inline: 16px;
+}
+
+.nav a {
+    font-family: var(--s);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.nav a:hover { color: #4dd0e1; }
+
+.shop::after {
+    content: url(../../icons/store-arrow-down.svg);
+    width: 16px;
+    height: 16px;
+    margin: 3px 0 3px 4px;
+}
+
+.header__search {
+    font-family: var(--s);
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #f0f0f0 ;
+    box-shadow: none;
+    border-radius: 62px;
+    background-color: #f0f0f0 ;
+    padding: 12px 16px 12px 34px;
+    max-width: 462px;
+}
+
+.search__label {
+    position: relative;
+}
+
+.search__label::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.store-profil {
+    position: relative;
+    margin-left: 40px;
+}
+
+.header__button {
+    margin-right: 16px;
+}
+
+.burger {
+    position: absolute;
+    right: -40px;
+    bottom: -10px;
+    transform: translateX(-50%);
+    display: none;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001;
+}
+.burger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 3px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.burger div span:nth-child(1) { top: 0; }
+.burger div span:nth-child(2) { top: 9px; }
+.burger div span:nth-child(3) { top: 18px; }
+
+.burger.active span:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+@media (width <= 922px) {
+
+    .header {
+        margin: 15px 14px;
+    }
+
+    .header__h1 {
+        font-size: 26px;
+    }
+}
+
+@media (width <= 768px) {
+
+    .hz__p {
+        display: none;
+    }
+
+    .header__h1 {
+        margin-right: 150px;
+    }
+
+    .nav {
+    position: fixed;
+    margin-inline: 0;
+    top: 0;
+    right: -280px;
+    width: 260px;
+    height: 100%;
+    background: #222;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 20px 20px;
+    gap: 20px;
+    transition: right 0.35s ease;
+    z-index: 1000;
+  }
+  .nav.active {
+    right: 0;
+  }
+  .nav a {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media (width <= 576px) {
+    .header__h1 {
+        margin-right: 7px;
+    }
+
+    .store-profil {
+        margin-left: 18px;
+    }
+}
+/* ===== АДАПТИВ ===== */
+.hzz {
+  position: relative;
+  padding-inline: 40px;
+}
+
+.hz__button {
+  right: 16px;
+  transform: none;
+}
+
+.header {
+  margin: 15px auto;
+  padding-inline: 16px;
+  max-width: 1272px;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__container {
+  width: 100%;
+  gap: 16px;
+}
+
+.header form {
+  flex: 1;
+  max-width: 462px;
+}
+
+.search__label {
+  display: block;
+}
+
+.header__search {
+  width: 100%;
+  max-width: none;
+}
+
+.store-profil {
+  display: flex;
+  flex-shrink: 0;
+  margin-left: 0;
+}
+
+@media (width <= 1100px) {
+  .nav {
+    gap: 16px;
+    margin-inline: 0;
+  }
+
+  .nav a {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+}
+
+@media (width <= 768px) {
+  .header {
+    justify-content: flex-start;
+  }
+
+  .header__h1 {
+    margin-right: 0;
+  }
+
+  .burger {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    order: -1;
+    flex-shrink: 0;
+  }
+
+  .burger.active {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .burger.active span {
+    background: #fff;
+  }
+
+  .nav a {
+    color: #fff;
+  }
+
+  .shop::after {
+    filter: invert(1);
+  }
+}
+
+@media (width <= 576px) {
+  .hzz {
+    height: auto;
+    padding-block: 9px;
+  }
+
+  .header__h1 {
+    font-size: 25px;
+    margin-right: auto;
+  }
+
+  .store-profil {
+    margin-left: auto;
+  }
+}
+
+/* ===== ЗАКРЫТИЕ ПЛАШКИ И ПОИСК-ИКОНКА ===== */
+.hzz.hzz--hidden {
+  display: none;
+}
+
+.hz__button {
+  cursor: pointer;
+}
+
+.header {
+  position: relative;
+}
+
+@media (width <= 576px) {
+  /* форма становится квадратной кнопкой 24x24 рядом с корзиной */
+  .header form {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .search__label {
+    position: static; /* поле будет позиционироваться от шапки */
+    display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  /* иконка лупы: крупнее и чёрная, как остальные иконки */
+  .search__label::before {
+    position: static;
+    display: block;
+    transform: none;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+    width: 22px;
+    height: 22px;
+    margin: 1px;
+    line-height: 0;
+  }
+
+  /* само поле скрыто */
+  .header__search {
+    display: none;
+  }
+
+  /* по нажатию на лупу поле выезжает под шапкой */
+  .header form.search--open .header__search {
+    display: block;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
+    right: 16px;
+    width: auto;
+    z-index: 50;
+    padding-left: 16px;
+    color: #000;
+  }
+
+  .store-profil {
+    margin-left: 12px;
+  }
+}
+
+/* ===== ВЫПАДАЮЩЕЕ МЕНЮ «МАГАЗИН» ===== */
+.dropdown {
+  position: relative;
+}
+
+.shop {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.shop::after {
+  display: block;
+  line-height: 0;
+  transition: transform 0.3s;
+}
+
+.dropdown.is-open .shop::after {
+  transform: rotate(180deg);
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: -24px;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 32px;
+  padding: 24px 28px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+}
+
+/* «мостик», чтобы меню не закрывалось, пока мышь идёт от ссылки к меню */
+.dropdown__menu::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+.dropdown__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown__title {
+  margin-bottom: 4px;
+  font-family: var(--s);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.nav .dropdown__link {
+  font-size: 16px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.nav .dropdown__link:hover {
+  color: #4dd0e1;
+}
+
+.nav .dropdown__link--sale {
+  color: #ff3333;
+}
+
+/* открыто: по клику (класс из JS), а на компьютере ещё и при наведении */
+.dropdown.is-open .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (width > 768px) {
+  .dropdown:hover .dropdown__menu,
+  .dropdown:focus-within .dropdown__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown:hover .shop::after {
+    transform: rotate(180deg);
+  }
+}
+
+/* в бургер-меню — раскрывающийся список (аккордеон) */
+@media (width <= 768px) {
+  .nav {
+    overflow-y: auto;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .shop {
+    justify-content: space-between;
+  }
+
+  .dropdown__menu {
+    position: static;
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 12px 0 16px 16px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .dropdown.is-open .dropdown__menu {
+    display: grid;
+  }
+
+  .dropdown__menu::before {
+    display: none;
+  }
+
+  .dropdown__title {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .nav .dropdown__link {
+    display: block;
+    width: auto;
+    padding: 0;
+    border: none;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .nav .dropdown__link--sale {
+    color: #ff6b6b;
+  }
+}

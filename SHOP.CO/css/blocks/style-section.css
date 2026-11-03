@@ -1,0 +1,201 @@
+.style-section{
+  max-width:1239px;
+  margin: 80px auto;
+  background:#f0f0f0;
+  border-radius:40px;
+  padding:70px 64px 64px;
+}
+
+.style-section__title {
+  margin-bottom: 64px;
+  font-family: var(--i) ;
+  font-weight: 900;
+  font-size: 48px;
+  text-align: center;
+  color: #000;
+}
+
+.style-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.img-style-1 {
+  display: block;
+  max-width: 407px;
+  border-radius: 20px;
+}
+
+.img-style-2 {
+  display: block;
+  max-width: 684px;
+  border-radius: 20px;
+}
+
+.style-flex__item {
+  position: relative;
+}
+
+.style-grid__label{
+  position:absolute;
+  left:36px;
+  top:25px;
+  z-index:1;
+  font-family:var(--s);
+  font-weight:700;
+  font-size:36px;
+  line-height:49px;
+  color:#000;
+}
+
+@media ( width <= 992px) {
+  .style-section {
+    max-width: 930px;
+  }
+
+  .img-style-1 {
+    max-width: 390px;
+  }
+
+  .img-style-2 {
+    max-width: 800px;
+  }
+
+  .img-free {
+    order: 1;
+  }
+
+  .img-formal {
+    order: 3;
+  }
+
+  .img-sport {
+    order: 2;
+  }
+  
+  .img-evening {
+    order: 4;
+  }
+}
+
+@media (width <= 768px) {
+  .style-section {
+    max-width : 738px;
+  }
+
+  .img-style-1, .img-style-2 {
+    max-width: 610px;
+  }
+}
+
+@media (width <= 576px) {
+  .style-section {
+    max-width: 544px;
+  }
+
+  .img-style-1, .img-style-2 {
+    max-width: 425px;
+  }
+}
+/* ===== АДАПТИВ ===== */
+.style-section {
+  width: calc(100% - 32px);
+  max-width: 1240px;
+}
+
+/* сетка 3 колонки: 37% / 26% / 37% даёт пропорции как в макете */
+.style-grid {
+  display: grid;
+  grid-template-columns: 37fr 26fr 37fr;
+  grid-auto-rows: 289px;
+}
+
+.img-free    { grid-column: 1 / 2; }
+.img-formal  { grid-column: 2 / 4; }
+.img-evening { grid-column: 1 / 3; }
+.img-sport   { grid-column: 3 / 4; }
+
+.style-grid a,
+.style-flex__item,
+.style-flex__item picture {
+  display: block;
+  height: 100%;
+}
+
+.img-style-1,
+.img-style-2 {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  background: #fff;
+}
+
+@media (width <= 992px) {
+  .style-section {
+    max-width: none;
+    padding: 48px 32px;
+  }
+
+  .style-section__title {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+
+  .style-grid {
+    grid-auto-rows: 220px;
+  }
+
+  .img-style-1,
+  .img-style-2 {
+    max-width: none;
+  }
+
+  .style-grid__label {
+    left: 24px;
+    top: 16px;
+    font-size: 28px;
+  }
+}
+
+@media (width <= 768px) {
+  .style-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 190px;
+    gap: 16px;
+  }
+
+  .img-free,
+  .img-formal,
+  .img-evening,
+  .img-sport {
+    grid-column: auto;
+  }
+
+  .style-section {
+    max-width: none;
+  }
+
+  .img-style-1,
+  .img-style-2 {
+    max-width: none;
+  }
+}
+
+@media (width <= 576px) {
+  .style-section {
+    margin: 48px auto;
+    padding: 40px 24px 28px;
+    border-radius: 20px;
+  }
+
+  .style-section__title {
+    margin-bottom: 28px;
+    font-size: 32px;
+  }
+
+  .style-grid__label {
+    font-size: 24px;
+  }
+}
